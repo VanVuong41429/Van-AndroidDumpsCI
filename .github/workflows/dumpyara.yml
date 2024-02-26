@@ -24,6 +24,9 @@ jobs:
 
     steps:
        - name: Checkouts
+         uses: actions/checkout@v4
+
+       - name: Cleanup
          uses: rokibhasansagar/slimhub_actions@main
 
        - name: Clone Dumpyara
