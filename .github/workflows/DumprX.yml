@@ -1,4 +1,4 @@
-name: DumprX
+name: DumprX-GitLab
  
 on:
   workflow_dispatch:
