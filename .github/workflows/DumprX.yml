@@ -19,7 +19,7 @@ env:
   ROM_URL: ${{ github.event.inputs.ROM_URL }}
 
   # Gitlab
-  PUSH_TO_GITLAB: true
+  PUSH_TO_GITLAB: false
 
   # Extra Command
   EXTRA_CMD: ${{ github.event.inputs.EXTRA_CMD }}
