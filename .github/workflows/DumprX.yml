@@ -61,7 +61,7 @@ jobs:
               echo "${{ secrets.PRIV_SSH_KEY }}" > ~/.ssh/id_ed25519  # Only for Gitlab
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "@VanFirmwareDumps" > .tg_chat
-              echo "gitlab.com" > .gitlab_instance
+              echo "gitgud.io" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
 
        - name: Run the Extra Command
