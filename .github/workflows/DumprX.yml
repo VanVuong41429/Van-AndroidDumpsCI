@@ -79,5 +79,5 @@ jobs:
               mv super_3.img product.img && mv super_4.img system.img
               mv super_5.img system_ext.img && mv super_6.img vendor.img
               cd .. && zip -r image.zip image1
-              rm -rf image*
+              rm -rf image1
               ./dumper.sh "$ROM_URL"
