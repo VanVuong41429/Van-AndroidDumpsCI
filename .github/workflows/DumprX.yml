@@ -72,13 +72,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              aria2c -x16 -s8 --console-log-level=warn --summary-interval=0 --check-certificate=false "https://mirrors.lolinet.com/firmware/lenowow/Y700_2023/TB320FC/TB320FC_ROW_OPEN_USER_Q00031.0_T_ZUI_15.0.139_ST_240205.7z"
-              7z e -y "TB320FC_ROW_OPEN_USER_Q00031.0_T_ZUI_15.0.139_ST_240205.7z" -o"image2" && rm "TB320FC_ROW_OPEN_USER_Q00031.0_T_ZUI_15.0.139_ST_240205.7z"
-              cd image2 && rm *rawprogram*
-              mv super_1.img super.img && mv super_2.img odm.img
-              mv super_3.img product.img && mv super_4.img system.img
-              mv super_5.img system_ext.img && mv super_6.img vendor.img
-              mv super_7.img vendor_dlkm.img
-              cd .. && zip -r image.zip image2
-              rm -rf image2
               ./dumper.sh "$ROM_URL"
