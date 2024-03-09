@@ -71,10 +71,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              aria2c -x16 -s8 --console-log-level=warn --summary-interval=0 --check-certificate=false "https://mirrors.lolinet.com/firmware/lenowow/Tab_P12_Pro_2023/TB371FC/TB371FC_CN_OPEN_USER_Q00028.1_T_ZUI_15.0.154_DEV_230507.zip"
-              7z e -y TB371FC_CN_OPEN_USER_Q00028.1_T_ZUI_15.0.154_DEV_230507.zip -o"tb371fc" && rm TB371FC_CN_OPEN_USER_Q00028.1_T_ZUI_15.0.154_DEV_230507.zip
-              cd tb371fc && rm *rawprogram*
-              mv super_4.img system.img
-              cd .. && zip -r image.zip tb371fc
-              rm -rf tb371fc
               ./dumper.sh "$ROM_URL"
