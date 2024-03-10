@@ -71,4 +71,11 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
+              aria2c -x16 -s8 --console-log-level=warn --summary-interval=0 --check-certificate=false "https://mirrors.lolinet.com/firmware/lenowow/Tab_P11_5G/TB-J607Z/TB-J607Z_S540390_231227_ROW_SVC.7z"
+              7z e -y TB-J607Z_S540390_231227_ROW_SVC.7z -o"image" > /dev/null 2>&1 || echo "Extract failed!"
+              rm TB-J607Z_S540390_231227_ROW_SVC.7z && cd image
+              rm *rawprogram* && mv super_1.img super.img && mv super_2.img odm.img && mv super_3.img product.img && mv super_4.img system.img && mv super_5.img vendor.img
+              cd ..
+              zip -r image.zip image > /dev/null 2>&1 || echo "Creating failed!"
+              rm -rf image
               ./dumper.sh "$ROM_URL"
