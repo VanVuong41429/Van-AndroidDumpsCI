@@ -71,5 +71,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              wget --no-check-certificate 'https://drive.usercontent.google.com/download?id=1vgJhMKRLy7bnKDHeh2-yzrje6Bx8jdQI&export=download&authuser=2&confirm=t&uuid=96572103-7575-4b4f-a6c4-f41cf0fdbbbf&at=APZUnTVHmBrh5i-IvkqpPu4Wq-vm:1710249584728' -O firmware.zip > /dev/null 2>&1 && echo 'Download Complete!'
               ./dumper.sh "$ROM_URL"
