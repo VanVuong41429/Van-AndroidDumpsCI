@@ -71,5 +71,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              wget --no-check-certificate 'https://drive.usercontent.google.com/download?id=1exyyLSVGr2Kg114wQCFRNvLLbwBBYj2Y&export=download&authuser=2&confirm=t&uuid=e281c77c-dc5a-4eee-b68b-18892240d0ac&at=APZUnTW-AvbGEAVGrPrFhgvmGiTt%3A1710412366333' -O e146b.zip > /dev/null 2>&1 && echo 'Download Complete!'
               ./dumper.sh "$ROM_URL"
