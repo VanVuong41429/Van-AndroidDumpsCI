@@ -62,6 +62,7 @@ jobs:
               echo "@VanFirmwareDumps" > .tg_chat
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
+              wget --no-check-certificate 'https://drive.usercontent.google.com/download?id=1VIPaOLWw_uOViT2VoFidpXNP2-QPAdMN&export=download&authuser=0&confirm=t&uuid=9b04a1dd-b39e-44da-88fd-ab240ed03c08&at=APZUnTVuoVxCMXhYh6cmnRX1HsiR:1711088346755' -O a55x.zip > /dev/null 2>&1 && echo 'Download Complete!'
 
        - name: Run the Extra Command
          working-directory: DumprX
