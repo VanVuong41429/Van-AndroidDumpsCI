@@ -63,9 +63,10 @@ jobs:
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
               pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-W7024 -r CHC -i 355046480123458 download -v W7024ZCS1BXA1/W7024CHC1BXA1/W7024ZCU1BWKA/W7024ZCS1BXA1 -o w7024.zip.enc4
-              samloader -m SM-W7024 -r CHC -i 355046480123458 decrypt -v W7024ZCS1BXA1/W7024CHC1BXA1/W7024ZCU1BWKA/W7024ZCS1BXA1 -V 4 -i w7024.zip.enc4 -o w7024.zip
-              rm w7024.zip.enc4
+              samloader -m SM-M446K -r KTC -i 350454001677942 checkupdate > ./version.txt
+              samloader -m SM-M446K -r KTC -i 350454001677942 download -v $(cat ./version.txt) -o m446k.zip.enc4
+              samloader -m SM-M446K -r KTC -i 350454001677942 decrypt -v $(cat ./version.txt) -V 4 -i m446k.zip.enc4 -o m446k.zip
+              rm m446k.zip.enc4 version.txt
 
        - name: Run the Extra Command
          working-directory: DumprX
