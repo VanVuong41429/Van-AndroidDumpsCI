@@ -62,6 +62,10 @@ jobs:
               echo "@VanFirmwareDumps" > .tg_chat
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
+              pip3 install git+https://github.com/martinetd/samloader.git
+              samloader -m SM-W9024 -r CHC -i 353606551234567 download -v W9024ZCS1BXA1/W9024CHC1BXA1/W9024ZCU1BWKB/W9024ZCS1BXA1 -o w9024.zip.enc4
+              samloader -m SM-W9024 -r CHC -i 353606551234567 decrypt -v W9024ZCS1BXA1/W9024CHC1BXA1/W9024ZCU1BWKB/W9024ZCS1BXA1 -V 4 -i w9024.zip.enc4 -o w9024.zip
+              rm w9024.zip.enc4
 
        - name: Run the Extra Command
          working-directory: DumprX
