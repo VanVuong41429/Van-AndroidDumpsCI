@@ -62,11 +62,6 @@ jobs:
               echo "@VanFirmwareDumps" > .tg_chat
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
-              pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-E156B -r INS -i 359468670123450 checkupdate || echo "No Firmware Found!"
-              samloader -m SM-E156B -r INS -i 359468670123450 download -v E156BXXU1AXB5/E156BODM1AXB5/E156BXXU1AXB1/E156BXXU1AXB5 -o firmware.zip.enc4
-              samloader -m SM-E156B -r INS -i 359468670123450 decrypt -v E156BXXU1AXB5/E156BODM1AXB5/E156BXXU1AXB1/E156BXXU1AXB5 -V 4 -i firmware.zip.enc4 -o firmware.zip
-              rm firmware.zip.enc4
 
        - name: Run the Extra Command
          working-directory: DumprX
