@@ -63,7 +63,7 @@ jobs:
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
               pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-X306B -r EUY -i 351771200356021 checkupdate
+              samloader -m SM-X306B -r EUY -i 351771200356021 checkupdate || echo "No Firmware Found!"
               samloader -m SM-X306B -r EUY -i 351771200356021 download -v X306BXXU1AWL4/X306BOXM1AWL4/X306BXXU1AWL4/X306BXXU1AWL4 -o firmware.zip.enc4
               samloader -m SM-X306B -r EUY -i 351771200356021 decrypt -v X306BXXU1AWL4/X306BOXM1AWL4/X306BXXU1AWL4/X306BXXU1AWL4 -V 4 -i firmware.zip.enc4 -o firmware.zip
               rm firmware.zip.enc4
