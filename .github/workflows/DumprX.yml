@@ -63,8 +63,8 @@ jobs:
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
               pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-S918B -r XXV -i 351868490760126 download -v $(samloader -m SM-S918B -r XXV checkupdate) -O .
-              samloader -m SM-S918B -r XXV -i 351868490760126 decrypt -v $(samloader -m SM-S918B -r XXV checkupdate) -i $(ls *.enc*) -o firmware.zip
+              samloader -m SM-S916B -r XXV -i 350786280519299 download -v $(samloader -m SM-S916B -r XXV checkupdate) -O .
+              samloader -m SM-S916B -r XXV -i 350786280519299 decrypt -v $(samloader -m SM-S916B -r XXV checkupdate) -i $(ls *.enc*) -o firmware.zip
               rm *.enc*
 
        - name: Run the Extra Command
