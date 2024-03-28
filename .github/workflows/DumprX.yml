@@ -62,6 +62,10 @@ jobs:
               echo "@VanFirmwareDumps" > .tg_chat
               echo "gitlab.com" > .gitlab_instance
               chmod 600 ~/.ssh/id_ed25519
+              pip3 install git+https://github.com/martinetd/samloader.git
+              samloader -m SM-S911B -r XXV -i 352429620338769 download -v $(samloader -m SM-S911B -r XXV checkupdate) -O .
+              samloader -m SM-S911B -r XXV -i 352429620338769 decrypt -v $(samloader -m SM-S911B -r XXV checkupdate) -i $(ls *.enc*) -o firmware.zip
+              rm *.enc*
 
        - name: Run the Extra Command
          working-directory: DumprX
